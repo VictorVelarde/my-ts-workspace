@@ -1,15 +1,15 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { store } from './app/store';
-import App from './App';
+import { store } from '../app/store';
+import App from '../App';
 
-test('renders learn react link', () => {
+test('renders Home content', () => {
   const { getByText } = render(
     <Provider store={store}>
       <App />
     </Provider>
   );
 
-  expect(getByText(/learn/i)).toBeInTheDocument();
+  expect(getByText(/Hello world/i)).toBeInTheDocument();
 });
